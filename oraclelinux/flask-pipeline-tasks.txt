@@ -1,0 +1,16 @@
+get-code
+----------
+rm -rf flask-docker
+git clone https://github.com/sundeepdhall/flask-docker.git
+stat flask-docker/Dockerfile
+
+build-code
+----------
+cd flask-docker/
+docker build -t flask-docker .
+
+run-container
+-------------
+docker stop flask-docker ||true
+docker rm flask-docker||true
+docker run -d -p  9000:80 --name flask-docker flask-docker

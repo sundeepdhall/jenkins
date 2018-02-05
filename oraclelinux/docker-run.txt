@@ -1,0 +1,1 @@
+docker run  --privileged=true   --net=host   --volume /var/lib/jenkins:/var/lib/jenkins   --volume /var/run/docker.sock:/var/run/docker.sock --name jenkins-ol jenkins-ol
